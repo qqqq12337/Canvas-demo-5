@@ -1,0 +1,12 @@
+#bar {
+  height: 30px;
+  width: 200px;
+  background-color: lightgray;
+  color: #fff;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 5px;
+  font-family: 微软雅黑;
+}
