@@ -8,7 +8,7 @@
     <title>demo</title>
 </head>
 <body>
-    <canvas id="myCanvas" width="200" height="150" style="border:1px solid #c3c3c3;">
+    <canvas id="myCanvas" width="200px" height="150px" style="border:1px solid #c3c3c3;" >
         </canvas>
 <script>
     var c=document.getElementById("myCanvas");
@@ -26,15 +26,16 @@
     cxt.fillStyle=grd;
     cxt.fillRect(0,50,200,50);
 </script>
-<script id="bar">
-    var c=document.getElementById("myCanvas");
-    var cxt=c.getContext("2d");
-    grd.addColorStop(0,"#dcdcdc");
-    cxt.fillStyle=grd;
-    cxt.fillRect(0,60,200,30);
-</script>
+
 <div id="bar">
-    <span style="margin-left: 20px;">你的颜值过低导致发送失败</span>
+    <span style="margin-left: 20px; border-bottom: 1px solid red;">你的颜值过低导致发送失败</span>
+</div>
+<div>
+    样式：
+</div>
+<div class="pullDown">
+   <div class="input" style="float: left;">感叹号</div><img class="icon" src="icon/triangle.svg">
+   <div class="seleli"style="float: left;>红包标</div><input type="radio"  name="checkSele" class="checkSele" value="1">
 </div>
 </body>
 </html>
