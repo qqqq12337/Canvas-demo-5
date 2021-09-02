@@ -1,42 +1,94 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>demo</title>
-</head>
-<body>
-    <canvas id="myCanvas" width="200px" height="150px" style="border:1px solid #c3c3c3;" >
-        </canvas>
-<script>
-    var c=document.getElementById("myCanvas");
-    var cxt=c.getContext("2d");
-    var grd=cxt.createLinearGradient(0,0,175,60);
-    grd.addColorStop(0,"#dddddd");
-    cxt.fillStyle=grd;
-    cxt.fillRect(0,0,200,150);
-</script>
-<script>
-    var c=document.getElementById("myCanvas");
-    var cxt=c.getContext("2d");
-    //var grd=cxt.createLinearGradient(0,0,200,60);
-    grd.addColorStop(0,"#ffffff");
-    cxt.fillStyle=grd;
-    cxt.fillRect(0,50,200,50);
-</script>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="200px"
+      height="150px"
+      style="border: 1px solid #c3c3c3"
+    >
+    </canvas>
+    <!-- <script>
+      var c = document.getElementById("myCanvas");
+      var cxt = c.getContext("2d");
+      var grd = cxt.createLinearGradient(0, 0, 175, 60);
+      grd.addColorStop(0, "#dddddd");
+      cxt.fillStyle = grd;
+      cxt.fillRect(0, 0, 200, 150);
+    </script>
+    <script>
+      var c = document.getElementById("myCanvas");
+      var cxt = c.getContext("2d");
+      //var grd=cxt.createLinearGradient(0,0,200,60);
+      grd.addColorStop(0, "#ffffff");
+      cxt.fillStyle = grd;
+      cxt.fillRect(0, 50, 200, 50);
+    </script> -->
 
-<div id="bar">
-    <img src="dist/icons/emm.svg">
-    <span style="margin-left: 20px; border-bottom: 3px solid red;">你的颜值过低导致发送失败</span>
-</div>
-<div>
-    样式：
-</div>
-<div class="pullDown">
-   <div class="input" style="float: left;">感叹号</div><img class="icon" src="icon/triangle.svg">
-   <div class="seleli"style="float: left;>红包标</div><input type="radio"  name="checkSele" class="checkSele" value="1">
-</div>
-</body>
+    <!-- <div id="bar">
+      <img width="20" height="20" src="./icons/emm.svg" />
+      <span style="margin-left: 5px; border-bottom: 2px solid red"
+        >你的颜值过低导致发送失败</span
+      >
+    </div> -->
+    <div>
+      <div id="row">
+        <span>样式：</span>
+        <select class="par">
+          <option value="1" selected="selected">感叹号</option>
+          <option value="1">红包标</option>
+        </select>
+      </div>
+      <div id="pwd">
+        <span>内容：</span>
+        <select class="fer">
+          <option value="1" selected="selected">对方撤回了一个红包</option>
+          <option value="2">你颜值过低发送失败</option>
+          <option value="3">你太穷消息发送失败</option>
+          <option value="4">你的消息违规被退回</option>
+          <option value="5">答应对方方可聊天</option>
+          <option value="6">对方正在玩命回复中</option>
+          <option value="7">消息正在努力发送中</option>
+          <option value="8">你的账户涉黄被限制</option>
+          <option value="9">发送失败请重新发送</option>
+          <option value="10">对方已关机稍后联系</option>
+          <option value="11">对方开启了勿扰模式</option>
+          <option value="12">对方现在忙无法回复</option>
+        </select>
+      </div>
+      <div id="mos">
+        <span>模式： </span>
+        <select class="hr">
+          <option value="1" selected="selected">白天</option>
+          <option value="2">黑夜</option>
+        </select>
+      </div>
+    </div>
+    <div id="nordea">
+      <span style="margin-left: 20px">确认生成</span>
+    </div>
+
+    <script>
+      let nordea = document.querySelector("#nordea");
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      nordea.addEventListener("click", function () {
+        console.log(11);
+        let image = new Image();
+        image.src = "./icons/emm.svg";
+        image.onload = function () {
+          ctx.drawImage(this, 50, 50);
+        };
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(0, 0, 200, 150);
+      });
+    </script>
+  </body>
 </html>

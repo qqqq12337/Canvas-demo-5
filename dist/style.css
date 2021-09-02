@@ -15,8 +15,24 @@ body {
   border-radius: 5px;
   font-family: 微软雅黑;
 }
-#text {
-  color: white;
-  border-bottom: 1px solid red;
-  margin-left: 4px;
+#nordea {
+  margin-top: 15px;
+  height: 30px;
+  width: 200px;
+  background-color: #ffcc00;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+#row {
+  margin-top: 10px;
+}
+#pwd {
+  margin-top: 10px;
+}
+
+#mos {
+  margin-top: 10px;
 }
